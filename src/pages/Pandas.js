@@ -1,20 +1,12 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import Panda from '../data/panda.json'
+import Header from '../components/Header.js'
 
 class Pandas extends Component {
   render() {
     return (
       <>
-        <header>
-          <Link to="/" style={{ textDecorationLine: 'none', color: '#1F69E4' }}>
-            <h1>Things Jason Likes</h1>
-          </Link>
-          <h3 className="subtitle">A Photo Gallery by Jason Perry</h3>
-        </header>
-        <Link to="/" style={{ textDecorationLine: 'none', color: '#363636' }}>
-          🏠 Home
-        </Link>
+        <Header />
         <figure>
           <figcaption>
             <h3>{Panda.pandas.title}</h3>

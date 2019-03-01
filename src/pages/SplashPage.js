@@ -1,28 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Panda from '../data/panda.json'
+import Header from '../components/Header.js'
 
 class SplashPage extends Component {
-  // Work in Later:
-  // state = {
-  //   articleTitle: '',
-  //   description: '',
-  //   photo: [],
-  //   imageURL: '',
-  //   pictureTitle: ''
-  // }
   render() {
     return (
       <>
-        <header>
-          <Link to="/" style={{ textDecorationLine: 'none', color: '#1F69E4' }}>
-            <h1>Things Jason Likes</h1>
-          </Link>
-          <h3 className="subtitle">A Photo Gallery by Jason Perry</h3>
-        </header>
-        <Link to="/" style={{ textDecorationLine: 'none', color: '#363636' }}>
-          🏠 Home
-        </Link>
+        <Header />
         <section className="gallery">
           <figure>
             <figcaption className="titleDescriptionBorder">
@@ -55,3 +40,19 @@ class SplashPage extends Component {
 }
 
 export default SplashPage
+
+// <section className="hobbies">
+// {Object.keys(hobbies).map((hobby, i) => {
+//   console.log('the hobby' + hobby)
+//   console.log('the hobby object:', hobbies[hobby])
+//   return (
+//     <section key={i} className="hobby">
+//       <header>
+//         <Link to={`/${hobby}`}>{hobbies[hobby].title}</Link>
+//       </header>
+//       <p>{hobbies[hobby].description}</p>
+//       <img src={hobbies[hobby].photos[0].imageURL} />
+//     </section>
+//   )
+// })}
+// </section>
