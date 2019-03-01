@@ -15,24 +15,38 @@ class SplashPage extends Component {
     return (
       <>
         <header>
-          <Link to="/">Things Jason Likes</Link>
-          <h2>A Photo Gallery by Jason Perry</h2>
+          <Link to="/" style={{ textDecorationLine: 'none', color: '#1F69E4' }}>
+            <h1>Things Jason Likes</h1>
+          </Link>
+          <h3 className="subtitle">A Photo Gallery by Jason Perry</h3>
         </header>
-        <Link to="/">🏠 Home</Link>
+        <Link to="/" style={{ textDecorationLine: 'none', color: '#363636' }}>
+          🏠 Home
+        </Link>
         <section className="gallery">
           <figure>
-            <figcaption>
-              <Link to="/Panda">{Panda.pandas.title}</Link>
+            <figcaption className="titleDescriptionBorder">
+              <Link
+                to="/Pandas"
+                style={{ textDecorationLine: 'none', color: '#1F69E4' }}
+              >
+                <h2>{Panda.pandas.title}</h2>
+              </Link>
               <p>{Panda.pandas.description}</p>
-              <img src={Panda.pandas.photos[0].imageURL} />
             </figcaption>
+            <img src={Panda.pandas.photos[0].imageURL} />
           </figure>
           <figure>
-            <figcaption>
-              <Link to="/Miniature">{Panda.miniatures.title}</Link>
+            <figcaption className="titleDescriptionBorder">
+              <Link
+                to="/mini"
+                style={{ textDecorationLine: 'none', color: '#1F69E4' }}
+              >
+                <h2>{Panda.miniatures.title}</h2>
+              </Link>
               <p>{Panda.miniatures.description}</p>
-              <img src={Panda.miniatures.photos[0].imageURL} />
             </figcaption>
+            <img src={Panda.miniatures.photos[0].imageURL} />
           </figure>
         </section>
       </>

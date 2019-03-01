@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Panda from '../data/panda.json'
 
-class Miniatures extends Component {
+class Pandas extends Component {
   render() {
     return (
       <>
@@ -17,29 +17,29 @@ class Miniatures extends Component {
         </Link>
         <figure>
           <figcaption>
-            <h3>{Panda.miniatures.title}</h3>
-            <p>{Panda.miniatures.description}</p>
+            <h3>{Panda.pandas.title}</h3>
+            <p>{Panda.pandas.description}</p>
           </figcaption>
           <section className="galleryPics">
             <figure className="titleNCap">
-              <img src={Panda.miniatures.photos[0].imageURL} />
+              <img src={Panda.pandas.photos[0].imageURL} />
               <figcaption>
                 <a
-                  href={Panda.miniatures.photos[0].sourceURL}
+                  href={Panda.pandas.photos[0].sourceURL}
                   style={{ textDecorationLine: 'none', color: '#1F69E4' }}
                 >
-                  {Panda.miniatures.photos[0].title}
+                  {Panda.pandas.photos[0].title}
                 </a>
               </figcaption>
             </figure>
             <figure className="titleNCap">
-              <img src={Panda.miniatures.photos[1].imageURL} />
+              <img src={Panda.pandas.photos[1].imageURL} />
               <figcaption>
                 <a
-                  href={Panda.miniatures.photos[1].sourceURL}
+                  href={Panda.pandas.photos[1].sourceURL}
                   style={{ textDecorationLine: 'none', color: '#1F69E4' }}
                 >
-                  {Panda.miniatures.photos[1].title}
+                  {Panda.pandas.photos[1].title}
                 </a>
               </figcaption>
             </figure>
@@ -50,4 +50,4 @@ class Miniatures extends Component {
   }
 }
 
-export default Miniatures
+export default Pandas
